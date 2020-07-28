@@ -4,9 +4,6 @@ install:
 lint:
 	npx eslint .
 
-gendiff:
-	node src/bin/gendiff.js
-
 link:
 	npm link
 
