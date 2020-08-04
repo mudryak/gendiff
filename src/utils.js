@@ -3,13 +3,21 @@ import fs from 'fs';
 import path from 'path';
 
 const readFile = (filePath) => {
+  if (!fs.existsSync(filePath)) {
+    return null;
+  }
   const fullPath = path.resolve(process.cwd(), filePath);
-  return fs.readFileSync(fullPath, 'UTF8');
+  const file = fs.readFileSync(fullPath, 'UTF8');
+  const fileEncode = JSON.parse(file);
+  return fileEncode;
 };
 
 const genDiff = (filepath1, filepath2) => {
-  const file1 = JSON.parse(readFile(filepath1));
-  const file2 = JSON.parse(readFile(filepath2));
+  const file1 = readFile(filepath1);
+  const file2 = readFile(filepath2);
+  if (!file1 || !file2) {
+    return null;
+  }
   const keys1 = _.keys(file1);
   const keys2 = _.keys(file2);
   const allKeys = _.uniq([...keys1, ...keys2]);
@@ -30,7 +38,8 @@ const genDiff = (filepath1, filepath2) => {
     result.push(`    ${key}: ${file1[key]}`);
     return result;
   }, []);
-  console.log(['{', ...finall, '}'].join('\n\r'));
+  const result = ['{', ...finall, '}'].join('\n');
+  return result;
 };
 
 export default genDiff;

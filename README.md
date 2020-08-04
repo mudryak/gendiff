@@ -1,4 +1,7 @@
 # Вычислитель отличий
+![Node CI](https://github.com/jimeneytron/frontend-project-lvl2/workflows/Node%20CI/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ae4248009b5c616d73d1/maintainability)](https://codeclimate.com/github/jimeneytron/frontend-project-lvl2/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ae4248009b5c616d73d1/test_coverage)](https://codeclimate.com/github/jimeneytron/frontend-project-lvl2/test_coverage)
 
 ## Установка:
 1. Склонировать проект.
