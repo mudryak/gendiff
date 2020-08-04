@@ -2,7 +2,7 @@ import path from 'path';
 import genDiff from '../src/index.js';
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-const types = ['json', 'yaml'];
+const types = ['json', 'yaml', 'ini'];
 const expected = `{
     host: hexlet.io
   - timeout: 20
