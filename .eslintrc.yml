@@ -7,6 +7,9 @@ env:
 extends:
   - 'airbnb-base'
 
+parserOptions:
+  ecmaVersion: 2020
+
 plugins:
   - 'jest'
 
