@@ -10,9 +10,6 @@ link:
 unlink:
 	npm unlink
 
-publish:
-	npm publish --dry-run
-
 test:
 	npm test
 

@@ -3,23 +3,20 @@
   "version": "1.0.0",
   "description": "Project #2 - Hexlet",
   "scripts": {
-    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "prepublishOnly": "npm run build",
     "test": "npx -n --experimental-vm-modules jest"
   },
-  "type": "module",
-  "main": "dist/utils.js",
+  "main": "src/bin/gendiff.js",
   "files": [
     "dist"
   ],
   "jest": {
-    "transform": {
-      "^.+\\.(js|jsx)?$": "babel-jest"
-    }
+    "testEnvironment": "node",
+    "transform": {}
   },
   "bin": {
-    "gendiff": "dist/bin/gendiff.js"
+    "gendiff": "src/bin/gendiff.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jimeneytron/frontend-project-lvl2.git"
@@ -38,10 +35,6 @@
     "lodash": "^4.17.19"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/node": "^7.10.5",
-    "@babel/preset-env": "^7.10.4",
     "eslint": "^7.6.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",

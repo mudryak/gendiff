@@ -19,3 +19,7 @@
 [![asciicast](https://asciinema.org/a/bUgTFij7MuvCt81DS311HCvFn.svg)](https://asciinema.org/a/bUgTFij7MuvCt81DS311HCvFn)
 
 [![asciicast](https://asciinema.org/a/bLUa7hIJCrV3PU4k00itVIcit.svg)](https://asciinema.org/a/bLUa7hIJCrV3PU4k00itVIcit)
+
+### Пример работы пакета со вложенной структурой
+
+[![asciicast](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua.svg)](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua)
