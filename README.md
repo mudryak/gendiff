@@ -27,3 +27,7 @@
 ### Пример ответ пакета в формате plain
 
 [![asciicast](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8.svg)](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8)
+
+### Пример ответ пакета в формате json
+
+[![asciicast](https://asciinema.org/a/iV9tHS2tQcz6T9I93VdVxmOVJ.svg)](https://asciinema.org/a/iV9tHS2tQcz6T9I93VdVxmOVJ)
