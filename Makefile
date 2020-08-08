@@ -2,7 +2,7 @@ install:
 	npm install
 
 lint:
-	npx eslint --format json .
+	npx eslint .
 
 link:
 	npm link
