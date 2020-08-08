@@ -23,3 +23,7 @@
 ### Пример работы пакета со вложенной структурой
 
 [![asciicast](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua.svg)](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua)
+
+### Пример ответ пакета в формате plain
+
+[![asciicast](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8.svg)](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8)

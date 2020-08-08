@@ -9,14 +9,15 @@ const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
 const readFile = (fileName) => fs.readFileSync(getFixturePath(fileName), 'UTF-8');
-const expectResult = readFile('result.txt');
 const types = ['json', 'yaml', 'ini'];
+const formats = ['stylish', 'plain'];
 
-describe.each(types)('Comparison files', (type) => {
-  it(`Test type - ${type}`, () => {
+describe.each(formats)('Comparison files', (format) => {
+  it.each(types)(`Testing ${format}`, (type) => {
     const beforePath = getFixturePath(`${type}/before.${type}`);
     const afterPath = getFixturePath(`${type}/after.${type}`);
-    const result = genDiff(beforePath, afterPath);
+    const expectResult = readFile(`result-${format}.txt`);
+    const result = genDiff(beforePath, afterPath, format);
     expect(result).toBe(expectResult);
   });
 });
