@@ -6,10 +6,10 @@ const createSpaces = (count) => {
   return ' '.repeat(countSpaces);
 };
 
-const createCorretString = (value, countSpaces) => {
+const createCorrectString = (value, countSpaces) => {
   if (_.isObject(value)) {
     const string = _.map(value, (val, key) => {
-      const correctVal = createCorretString(val, countSpaces + 1);
+      const correctVal = createCorrectString(val, countSpaces + 1);
       return `${createSpaces(countSpaces + 1)}  ${key}: ${correctVal}`;
     }).join('\n');
     return `{\n${string}\n${createSpaces(countSpaces)}  }`;
@@ -21,8 +21,8 @@ const stylish = (ast, countSpaces = 0) => ast.map((value) => {
   const {
     status, key, children,
   } = value;
-  const newValue = createCorretString(value.newValue, countSpaces);
-  const oldValue = createCorretString(value.oldValue, countSpaces);
+  const newValue = createCorrectString(value.newValue, countSpaces);
+  const oldValue = createCorrectString(value.oldValue, countSpaces);
   switch (status) {
     case 'added':
       return `${createSpaces(countSpaces)}+ ${key}: ${newValue}`;

@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
-import parser from './parsers.js';
+import parser from './parser.js';
 
 const getFileType = (pathFile) => {
   const baseName = path.extname(pathFile);

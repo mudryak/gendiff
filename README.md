@@ -20,14 +20,14 @@
 
 [![asciicast](https://asciinema.org/a/bLUa7hIJCrV3PU4k00itVIcit.svg)](https://asciinema.org/a/bLUa7hIJCrV3PU4k00itVIcit)
 
-### Пример работы пакета со вложенной структурой
+### Пример работы пакета со вложенной структурой (stylish)
 
 [![asciicast](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua.svg)](https://asciinema.org/a/2FHHAWRjnoQHMYY50ifbvIyua)
 
-### Пример ответ пакета в формате plain
+### Пример ответа пакета в формате plain
 
 [![asciicast](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8.svg)](https://asciinema.org/a/jAgYazsBWoq082tuugpDhFWT8)
 
-### Пример ответ пакета в формате json
+### Пример ответа пакета в формате json
 
 [![asciicast](https://asciinema.org/a/iV9tHS2tQcz6T9I93VdVxmOVJ.svg)](https://asciinema.org/a/iV9tHS2tQcz6T9I93VdVxmOVJ)
