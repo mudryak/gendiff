@@ -24,7 +24,7 @@ const parseIni = (file) => {
   return correctIniParse(iniFile);
 };
 
-const parser = (file, fileType) => {
+const parse = (file, fileType) => {
   switch (fileType) {
     case 'json':
       return JSON.parse(file);
@@ -37,4 +37,4 @@ const parser = (file, fileType) => {
   }
 };
 
-export default parser;
+export default parse;

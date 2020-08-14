@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
-import parser from './parser.js';
+import parser from './parse.js';
 
 const getFileType = (pathFile) => {
   const baseName = path.extname(pathFile);
@@ -13,9 +13,9 @@ const readFile = (filePath) => {
     return null;
   }
   const fullPath = path.resolve(process.cwd(), filePath);
-  const file = fs.readFileSync(fullPath, 'UTF8');
+  const content = fs.readFileSync(fullPath, 'UTF8');
   const fileType = getFileType(filePath);
-  const fileEncode = parser(file, fileType);
+  const fileEncode = parser(content, fileType);
   return fileEncode;
 };
 

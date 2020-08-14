@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
 const buildAST = (data1, data2) => {
-  const keys = _.uniq([...Object.keys(data1), ...Object.keys(data2)]);
+  const keys = _.union(_.keys(data1), _.keys(data2));
   const resultAST = keys.map((key) => {
     if (!_.has(data1, key)) return { key, status: 'added', newValue: data2[key] };
     if (!_.has(data2, key)) return { key, status: 'removed', oldValue: data1[key] };

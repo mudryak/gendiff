@@ -3,12 +3,12 @@ import buildAST from './buildAST.js';
 import getFormat from './formatters/index.js';
 
 const genDiff = (filepath1, filepath2, format) => {
-  const file1 = readFile(filepath1);
-  const file2 = readFile(filepath2);
-  if (!file1 || !file2) {
+  const content1 = readFile(filepath1);
+  const content2 = readFile(filepath2);
+  if (!content1 || !content2) {
     return null;
   }
-  const ast = buildAST(file1, file2);
+  const ast = buildAST(content1, content2);
   return getFormat(format)(ast);
 };
 

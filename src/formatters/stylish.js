@@ -7,14 +7,12 @@ const createSpaces = (count) => {
 };
 
 const createCorrectString = (value, countSpaces) => {
-  if (_.isObject(value)) {
-    const string = _.map(value, (val, key) => {
-      const correctVal = createCorrectString(val, countSpaces + 1);
-      return `${createSpaces(countSpaces + 1)}  ${key}: ${correctVal}`;
-    }).join('\n');
-    return `{\n${string}\n${createSpaces(countSpaces)}  }`;
-  }
-  return value;
+  if (!_.isObject(value)) return value;
+  const string = _.map(value, (val, key) => {
+    const correctVal = createCorrectString(val, countSpaces + 1);
+    return `${createSpaces(countSpaces + 1)}  ${key}: ${correctVal}`;
+  }).join('\n');
+  return `{\n${string}\n${createSpaces(countSpaces)}  }`;
 };
 
 const stylish = (ast, countSpaces = 0) => ast.map((value) => {

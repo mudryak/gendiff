@@ -6,7 +6,7 @@ const getCorrectValue = (value) => {
   return value;
 };
 
-const plain = (ast, parentKey) => ast.map((value) => {
+const plain = (ast, parentKey) => ast.flatMap((value) => {
   const {
     status, children,
   } = value;
@@ -21,12 +21,12 @@ const plain = (ast, parentKey) => ast.map((value) => {
     case 'changed':
       return `Property '${key}' was updated. From ${oldValue} to ${newValue}`;
     case 'unchanged':
-      return '';
+      return null;
     case 'nested':
-      return plain(children, key).filter((val) => val !== '').join('\n');
+      return plain(children, key).flat();
     default:
       throw new Error(`Incorrect status '${status}'`);
   }
 });
 
-export default (ast) => plain(ast).filter((val) => val !== '').join('\n');
+export default (ast) => plain(ast).filter((val) => !_.isNull(val)).join('\n');
