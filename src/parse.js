@@ -19,21 +19,21 @@ const correctIniParse = (obj) => {
   }, {});
 };
 
-const parseIni = (file) => {
-  const iniFile = ini.parse(file);
-  return correctIniParse(iniFile);
+const parseIni = (data) => {
+  const iniData = ini.parse(data);
+  return correctIniParse(iniData);
 };
 
-const parse = (file, fileType) => {
-  switch (fileType) {
+const parse = (data, dataType) => {
+  switch (dataType) {
     case 'json':
-      return JSON.parse(file);
+      return JSON.parse(data);
     case 'yaml':
-      return yaml.safeLoad(file);
+      return yaml.safeLoad(data);
     case 'ini':
-      return parseIni(file);
+      return parseIni(data);
     default:
-      throw new TypeError(`unknown data type - '${fileType}'`);
+      throw new TypeError(`unknown data type - '${dataType}'`);
   }
 };
 
